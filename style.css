@@ -8,7 +8,7 @@
 
 :root {
   font-size: 12px;
-  --color-text: #292828;
+  --color-text: #e6e6e6;
   --color-bg: #ddd;
   --color-link: #000;
   --color-link-hover: #000;
@@ -86,7 +86,7 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
-    radial-gradient(circle, #315f316e 0%, transparent 100%);
+    radial-gradient(circle, #9e65ce6e 0%, transparent 100%);
   background-size: 250px, 100%;
   pointer-events: none;
 }
@@ -209,7 +209,7 @@ a:focus-visible {
   left: 0;
   z-index: 0;
   background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
-    radial-gradient(at top, #688d68 0%, #ddd 100%);
+    radial-gradient(at top, #645897 0%, #ddd 100%);
   background-size: 250px, 100%;
 }
 
@@ -272,5 +272,37 @@ a:focus-visible {
   }
   .content__text p.highlight {
     font-size: clamp(2rem, 7vh, 4rem);
+  }
+}
+
+.characters {
+  position: absolute;
+  bottom: 2%; /* Ajuste a posição vertical */
+  left: 50%; /* Centraliza no eixo horizontal */
+  transform: translateX(-230%);
+  display: flex;
+  gap: 2rem; /* Espaço entre as imagens */
+}
+
+.character {
+  width: 120px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+.character--cat {
+  animation: float 4s infinite ease-in-out;
+}
+
+.character--dog {
+  animation: float 4s infinite ease-in-out alternate;
+}
+
+/* Animação para flutuar suavemente */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
