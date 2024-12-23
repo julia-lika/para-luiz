@@ -86,7 +86,7 @@ a:focus-visible {
   width: 100%;
   height: 100%;
   background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
-    radial-gradient(circle, #9e65ce6e 0%, transparent 100%);
+    radial-gradient(circle, #3573f86e 0%, transparent 100%);
   background-size: 250px, 100%;
   pointer-events: none;
 }
@@ -148,7 +148,7 @@ a:focus-visible {
 }
 
 .enter {
-  color: rgba(0, 0, 0, 0.8);
+  color: #e6e6e6;
   position: absolute;
   text-transform: uppercase;
   padding: 1.75rem 4rem;
@@ -170,7 +170,7 @@ a:focus-visible {
   height: 100%;
   top: 0;
   left: 0;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid #e6e6e6;
   border-radius: 3rem;
   transition: all 0.3s;
   z-index: -1;
@@ -178,7 +178,7 @@ a:focus-visible {
 
 .enter:focus::before,
 .enter:hover::before {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(226, 226, 226, 0.2);
 }
 
 .fullview {
@@ -209,7 +209,7 @@ a:focus-visible {
   left: 0;
   z-index: 0;
   background: url(https://github.com/misalagp/imgs/blob/main/noise.png?raw=true),
-    radial-gradient(at top, #645897 0%, #ddd 100%);
+    radial-gradient(at top, #4763a0 0%, #ddd 100%);
   background-size: 250px, 100%;
 }
 
@@ -304,5 +304,113 @@ a:focus-visible {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* Ajuste na posição da seção de corações */
+.container {
+  position: absolute; /* Garante que os corações fiquem flutuando */
+  top: 75%; /* Ajuste para centralizar no eixo Y */
+  left: 23.5%; /* Ajuste para centralizar no eixo X */
+}
+
+/* Estilo dos corações */
+.heart {
+  position: absolute;
+  animation: heartUp 1.4s infinite ease-in;
+}
+
+/* Primeira camada */
+.heart:nth-child(1) {
+  fill: #4763a0;
+  left: 45%;
+  animation-delay: 0s;
+}
+
+/* Segunda camada */
+.heart:nth-child(2) {
+  fill: #4763a0;
+  left: 50%;
+  animation-delay: 0.3s;
+}
+
+/* Terceira camada */
+.heart:nth-child(3) {
+  fill: #4763a0;
+  left: 55%;
+  animation-delay: 0.6s;
+}
+
+/* Terceira camada */
+.heart:nth-child(4) {
+  fill: #4763a0;
+  left: 55%;
+  animation-delay: 0.9s;
+}
+
+/* Terceira camada */
+.heart:nth-child(5) {
+  fill: #4763a0;
+  left: 55%;
+  animation-delay: 1.2s;
+}
+
+/* Terceira camada */
+.heart:nth-child(6) {
+  fill: #4763a0;
+  left: 55%;
+  animation-delay: 1.5s;
+}
+
+@-webkit-keyframes heartUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0) rotate(10deg);
+    transform: translate3d(0, 0, 0) rotate(10deg);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -35vh, 0) scale(1.2) rotate(-10deg);
+    transform: translate3d(0, -35vh, 0) scale(1.2) rotate(-10deg);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes heartUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0) rotate(10deg);
+    transform: translate3d(0, 0, 0) rotate(10deg);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -35vh, 0) scale(1.2) rotate(-10deg);
+    transform: translate3d(0, -70vh, 0) scale(1.2) rotate(-10deg);
+  }
+
+  100% {
+    opacity: 0;
   }
 }
